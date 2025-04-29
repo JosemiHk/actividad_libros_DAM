@@ -2,6 +2,9 @@ package com.example.activida;
 import java.util.Date;
 
 public class Prestamo {
+
+    private static int contadorPrestamos = 0; // Contador estático para generar IDs únicos
+    private int idPrestamo; // Nuevo campo para el ID del préstamo
     private Estudiante estudiante;
     private Libro libro;
     private Bibliotecario bibliotecario;
@@ -11,6 +14,7 @@ public class Prestamo {
     private boolean devuelto = false;
 
     public Prestamo(Estudiante estudiante, Libro libro, Bibliotecario bibliotecario, Date fechaPrestamo, Date fechaDevolucion) {
+        this.idPrestamo = ++contadorPrestamos; // Asignar un ID único al crear el préstamo
         this.estudiante = estudiante;
         this.libro = libro;
         this.bibliotecario = bibliotecario;
@@ -19,7 +23,9 @@ public class Prestamo {
         calcularMora();
     }
 
-
+    public int getIdPrestamo() {
+        return idPrestamo;
+    }
     private void calcularMora() {
         long diferenciaMillis = fechaDevolucion.getTime() - fechaPrestamo.getTime();
         long dias = (long) Math.ceil((double) diferenciaMillis / (1000 * 60 * 60 * 24));

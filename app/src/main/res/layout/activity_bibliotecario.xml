@@ -36,33 +36,36 @@
         android:id="@+id/btnAgregarBibliotecario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D0A5A5"
+        android:padding="16dp"
         android:text="Agregar Bibliotecario"
-        app:layout_constraintTop_toBottomOf="@id/editNombre"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:padding="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/editNombre" />
 
     <!-- Botón para eliminar bibliotecario -->
     <Button
         android:id="@+id/btnEliminarBibliotecario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D0A5A5"
+        android:padding="16dp"
         android:text="Eliminar Bibliotecario"
-        app:layout_constraintTop_toBottomOf="@id/btnAgregarBibliotecario"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:padding="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/btnAgregarBibliotecario" />
 
     <!-- Botón para modificar bibliotecario -->
     <Button
         android:id="@+id/btnModificarBibliotecario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D0A5A5"
+        android:padding="16dp"
         android:text="Modificar Bibliotecario"
-        app:layout_constraintTop_toBottomOf="@id/btnEliminarBibliotecario"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:padding="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/btnEliminarBibliotecario" />
 
     <!-- ListView para mostrar bibliotecarios -->
     <ListView
@@ -80,10 +83,11 @@
         android:id="@+id/btnVolver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#DB6D6D"
+        android:padding="16dp"
         android:text="Volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:padding="16dp" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

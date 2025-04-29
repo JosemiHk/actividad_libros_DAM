@@ -5,18 +5,37 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#524D4D"
+    android:foregroundTint="#D9CACA"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnReporte"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#D0A5A5"
+        android:onClick="irAReporteGeneral"
+        android:text="Reporte General"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDevolucion" />
 
     <Button
         android:id="@+id/btnEstudiantes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="24dp"
+        android:backgroundTint="#D0A5A5"
         android:onClick="irAGestionEstudiantes"
         android:text="Gestión de Estudiantes"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,11 +44,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
+        android:backgroundTint="#D0A5A5"
         android:onClick="irAGestionLibros"
         android:text="Gestión de Libros"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnEstudiantes" />
 
@@ -38,11 +59,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
+        android:backgroundTint="#D0A5A5"
+        android:foregroundTint="#FFFFFF"
         android:onClick="irAGestionBibliotecarios"
         android:text="Gestión de Bibliotecarios"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLibros" />
 
@@ -51,38 +75,57 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
+        android:backgroundTint="#D0A5A5"
         android:onClick="irAGestionPrestamos"
         android:text="Gestión de Préstamos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnBibliotecarios" />
 
     <Button
-        android:id="@+id/btnReporte"
+        android:id="@+id/btnDevolucion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:onClick="irAReporteGeneral"
-        android:text="Reporte General"
+        android:backgroundTint="#D0A5A5"
+        android:onClick="irAGestionDevolucion"
+        android:text="Devolución de Libros"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPrestamos" />
+        app:layout_constraintTop_toBottomOf="@id/btnPrestamos" />
 
     <Button
         android:id="@+id/btnMora"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
+        android:backgroundTint="#D0A5A5"
         android:onClick="irAReporteMora"
         android:text="Reporte Mora"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnReporte" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="370dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="28dp"
+        android:ellipsize="none"
+        android:text="GESTIÓN DE BIBLIOTECA NACIONAL DEL PERÚ"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

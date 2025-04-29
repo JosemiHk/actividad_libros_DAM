@@ -1,10 +1,8 @@
 package com.example.activida;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 public class PrestamoActivity extends AppCompatActivity {
 
@@ -114,7 +111,8 @@ public class PrestamoActivity extends AppCompatActivity {
                 // Obtener el último préstamo para mostrar los datos
                 Prestamo ultimo = biblioteca.getPrestamos().get(biblioteca.getPrestamos().size() - 1);
 
-                String mensaje = "Nombre: " + estudianteSeleccionado.getNombre() + "\n" +
+                String mensaje = "ID Préstamo: " + ultimo.getIdPrestamo() + "\n" +
+                        "Nombre: " + estudianteSeleccionado.getNombre() + "\n" +
                         "Libro: " + libroSeleccionado.getTitulo() + "\n" +
                         "Fecha del Préstamo: " + sdf.format(ultimo.getFechaPrestamo()) + "\n" +
                         "Fecha de Devolución: " + sdf.format(ultimo.getFechaDevolucion()) + "\n" +
@@ -143,5 +141,4 @@ public class PrestamoActivity extends AppCompatActivity {
         libroSeleccionado = null;
         bibliotecarioSeleccionado = null;
     }
-
 }

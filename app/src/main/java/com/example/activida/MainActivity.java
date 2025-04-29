@@ -51,4 +51,18 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ReporteMora.class);
         startActivity(intent);
     }
+
+
+    // Nuevo metodo para la gestión de devoluciones
+    public void irAGestionDevolucion(View view) {
+        // Aquí debes agregar el código para iniciar la actividad de gestión de devoluciones.
+        // Por ejemplo, si tienes una actividad llamada DevolucionActivity:
+        Intent intent = new Intent(this, DevolucionActivity.class);
+        startActivity(intent);
+    }
+
+    public void irAReporteMorosos(View view) {
+        Intent intent = new Intent(this, ReporteMorososActivity.class);
+        startActivity(intent);
+    }
 }

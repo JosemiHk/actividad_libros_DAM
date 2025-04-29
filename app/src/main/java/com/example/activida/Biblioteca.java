@@ -1,5 +1,6 @@
 package com.example.activida;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -39,6 +40,8 @@ public class Biblioteca {
     public void agregarBibliotecario(Bibliotecario b) {
         bibliotecarios.add(b);
     }
+
+
 
     public void registrarPrestamo(Estudiante e, Libro l, Bibliotecario b, Date fechaDevolucion) {
         if (l.isDisponible()) {
@@ -162,5 +165,34 @@ public class Biblioteca {
 
     public List<Prestamo> getPrestamos() {
         return prestamos;
+    }
+
+    public String generarReporteMorosos() {
+        StringBuilder reporte = new StringBuilder();
+        reporte.append("Reporte de Estudiantes con Moras Mayores a S/. 50\n\n");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        boolean hayMorosos = false;
+
+        for (Estudiante estudiante : estudiantes) {
+            double moraTotal = 0;
+            for (Prestamo prestamo : prestamos) {
+                if (prestamo.getEstudiante().equals(estudiante)) {
+                    moraTotal += prestamo.getMora();
+                }
+            }
+
+            if (moraTotal > 50) {
+                hayMorosos = true;
+                reporte.append("Estudiante: ").append(estudiante.getNombre()).append("\n");
+                reporte.append("Código: ").append(estudiante.getCodigo()).append("\n");
+                reporte.append("Mora Total: S/. ").append(String.format("%.2f", moraTotal)).append("\n\n");
+            }
+        }
+
+        if (!hayMorosos) {
+            reporte.append("No hay estudiantes con moras mayores a S/. 50.");
+        }
+
+        return reporte.toString();
     }
 }
